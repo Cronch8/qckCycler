@@ -14,13 +14,14 @@ The Go Programming Language is Required if you want to compile the color cycler 
 1. Clone this repository
 2. Build the `qckprism` tool
    Ensure the compiled binary is located at `./target/debug/qckprism`.
-3. Compile the Go program (if you want)
-
-Run the color cycler with root permissions, then it can pass those perms onto the qckprism tool.
+3. change the path at the start of the program to point to the compiled executable of qckprism
+4. Compile the Go program (if you want)
+5. dont complain how janky it is to do it this way is because i made this tool for myself and i didnt really think about user frendliness
+6. Run the color cycler with root permissions, then it can pass those perms onto the qckprism tool.
 ```bash
 sudo ./colorCycler [gradient number]
 ```
-This utility itself doesnt use those perms, just uses it to run the qckprism with root each time it updates the colours. I know an udev rule can be used (as is mentioned onthe qckprism page) but i couldnt get it to work so i just used sudo
+This utility itself doesnt use root perms, just uses it to run the qckprism with root each time it updates the colours. I know an udev rule can be used (as is mentioned onthe qckprism github page) but i couldnt get it to work so i just used sudo
 
 ### Gradient Options
 - **Default**: Orange-purple into blue-green.
@@ -34,3 +35,4 @@ sudo ./colorCycler 1
 ```
 If no gradient ID is provided, the default gradient is used.
 
+(yes half of this readme was generated with ai, i'm lazy alright)

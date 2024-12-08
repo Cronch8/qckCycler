@@ -15,6 +15,9 @@ func main() {
 		return
 	}
 
+    // change this to where you cloned and compiled the qckprism binary
+    const executablePath = "./target/debug/qckprism"
+
     // Define cosine-based color gradient
     var gradient [4][3]float64
     if len(os.Args) >= 2 {
@@ -64,7 +67,7 @@ func main() {
     }
 
 
-	// Time variables
+	// variables
     const speed float64 = 0.15
 	const updateRate float64 = 0.01
 	var t float64 = -100000// -100k to double the time before a reset is required (should last for a few days)
@@ -85,7 +88,7 @@ func main() {
 		colorB := fmt.Sprintf("%02x%02x%02x", b8, r8, g8)
 
 		// Call qckprism with calculated colors
-        cmd := exec.Command("./target/debug/qckprism", "-b", colorA, "-a", colorB)
+        cmd := exec.Command(executablePath, "-b", colorA, "-a", colorB)
         cmd.Stderr = os.Stderr
         cmd.Stdout = os.Stdout
         //fmt.Printf("Running command: ./target/debug/qckprism -a %s -b %s\n", colorA, colorB)
