@@ -67,7 +67,7 @@ func main() {
 	// Time variables
     const speed float64 = 0.15
 	const updateRate float64 = 0.01
-	var t float64 = -100000// -100k to double the time before a reset is required
+	var t float64 = -100000// -100k to double the time before a reset is required (should last for a few days)
 
 	for {
 		// Calculate RGB based on the cosine gradient
