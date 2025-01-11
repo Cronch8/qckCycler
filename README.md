@@ -35,4 +35,4 @@ sudo ./colorCycler 1
 ```
 If no gradient ID is provided, the default gradient is used.
 
-(yes half of this readme was generated with ai, i'm lazy alright)
+(Yes half of this readme was generated with ai, i'm lazy alright)
